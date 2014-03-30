@@ -1,0 +1,21 @@
+{ 
+  "name": "jonnyonthe", 
+  "version": "0.0.1", "author": "Jonny Trejo <jonnyonthe@gmail.com>", 
+  "description": "Jonnyonthe.com is a professional online design portfolio website for Jonny Trejo - Designer, Developer, and Art Director.", 
+  "repository": { 
+    "type": "git", 
+    "url": "https://github.com/Jonnyonthe/jonnyonthe" 
+  }, 
+  "devDependencies": { 
+      "grunt": "latest",
+      "grunt-contrib-compass": "~0.7.2",
+      "grunt-contrib-sass": "~0.7.3",
+      "grunt-contrib-watch": "~0.6.1",
+      "grunt-contrib-uglify": "~0.4.0",
+      "grunt-contrib-concat": "~0.3.0"
+  }, 
+      "license": "MIT", 
+      "engines": { 
+      "node": ">=0.8" 
+      } 
+}
