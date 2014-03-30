@@ -44,7 +44,7 @@ module.exports = function(grunt) {
       },
       /* watch our files for change, reload */
       livereload: {
-        files: ['*.html', 'css/*.css', 'images/*', 'dist/{main.min.js, plugins.min.js}'],
+        files: ['*.html', 'css/*.css', 'images/*', 'dist/*'],
         options: {
           livereload: true
         }
@@ -54,6 +54,7 @@ module.exports = function(grunt) {
   });
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.registerTask('default', ['compass:dev', 'concat', 'uglify', 'watch']);
