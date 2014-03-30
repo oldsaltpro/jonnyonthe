@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       },
       dist: {
         // the files to concatenate
-        src: ['src/**/*.js'],
+        src: ['src/vendor/TweenMax.js', 'src/vendor/respond.js', 'src/vendor/slimScroll.js', 'src/vendor/fullpage.js', 'src/vendor/Swipebox.js', 'src/*.js' ],
         // the location of the resulting JS file
         dest: 'dist/<%= pkg.name %>.js'
       }
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
       },
       /* watch and see if our javascript files change, or new packages are installed */
       js: {
-        files: ['dist/**/*.js'],
+        files: ['src/**/*.js'],
         tasks: ['uglify']
       },
       /* watch our files for change, reload */
@@ -52,11 +52,6 @@ module.exports = function(grunt) {
     }
 
   });
-  grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+  require('load-grunt-tasks')(grunt);
   grunt.registerTask('default', ['compass:dev', 'concat', 'uglify', 'watch']);
-
 }
